@@ -1,0 +1,10 @@
+﻿# Prozessschritte zum Verarbeiten eines Teils.
+# Jede Zeile gibt einen Prozesschritt an, der an einem Teil durchgeführt werden muss.
+# Die Reihenfolge muss dabei eingehalten werden.
+
+INITIALISIEREN
+BOHREN
+FRAESEN
+FASEN
+LACKIEREN
+EINLAGERN

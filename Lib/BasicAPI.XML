@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BasicAPI</name>
+    </assembly>
+    <members>
+        <member name="T:BasicAPI.Eingabe.KonfigurationenLader">
+            <summary>
+            Sammlung statischer Methoden zum Einlesen externer Konfigurationen
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Eingabe.KonfigurationenLader.LeseKonfiguration(System.String)">
+            <summary>
+            Liest die angegebene Datei zeilenweise aus und gibt diese Zeile als Liste von Strings aus.
+            Dabei werden Zeilen ignoriert, die mit '#' beginnen oder leer sind.
+            Jedes Leerzeichen in der Zeile trennt einen neuen String ab.
+            
+            Alle gewerteten Zeilen werden als Liste ausgegeben.
+            </summary>
+            <param name="dateiPfad">Datei-Name/-Pfad der zu lesenden Datei</param>
+            <returns>Liste mit string-Listen, wobei jede string-Liste eine Zeile in der angegebenen Datei repräsentiert</returns>
+        </member>
+        <member name="T:BasicAPI.Ausgabe.BasisSimulation">
+            <summary>
+            Diese Klasse wird momentan nicht veröffentlicht und von DoxyGen ignoriert.
+            
+            Führt eine einfache Simmulation durch.
+            </summary>
+        </member>
+        <member name="T:BasicAPI.Ausgabe.AbstrakteSimulation`1">
+            <summary>
+            eine allgemeine Definition einer Simulation
+            </summary>
+            <typeparam name="T">Typ der Simulations-Objekte, die verarbeitet werden sollen</typeparam>
+        </member>
+        <member name="F:BasicAPI.Ausgabe.AbstrakteSimulation`1._DisposedValue">
+            <summary>
+            Variable zur Steuerung des 'Dispose-Patterns'
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Ausgabe.AbstrakteSimulation`1._Objekte">
+            <summary>
+            eine Liste der zu simulierenden Objekte
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.AbstrakteSimulation`1.#ctor">
+            <summary>
+            Führt eine grundlegende Initialisierung der Simulation durch.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.AbstrakteSimulation`1.FuegeSimulationsobjektHinzu(`0)">
+            <summary>
+            Fügt ein zu simulierendes Objekt der Simulation hinzu.
+            </summary>
+            <param name="objekt">das zu simulierende Objekt</param>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.AbstrakteSimulation`1.FuegeSimulationsobjekteHinzu(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Fügt eine Sammlung zu simulierender Objekte der Simulation hinzu.
+            </summary>
+            <param name="objektListe">eine Sammlung zu simulierender Objekte</param>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.AbstrakteSimulation`1.Dispose(System.Boolean)">
+            <summary>
+            Wird von Dispose aufgerufen und gibt alle Ressourcen frei.
+            </summary>
+            <param name="disposing">Angabe, ob der interne Dispose-Prozess ausgeführt werden soll</param>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.AbstrakteSimulation`1.Dispose">
+            <summary>
+            Freigabe aller Ressourcen.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.AbstrakteSimulation`1.StarteSimulation(System.TimeSpan)">
+            <summary>
+            Startet die Simulation mit einer gegebenen Laufzeit.
+            Die Simulation wird in 1 [ms] Schritten durchgeführt.
+            
+            Wird eine Laufzeit von 0 [ms] angegeben, wird die Simulation nie beendet.
+            Simmulationsobjekte mit einer Aktivitäts-Zeit von 0 [ms] werden bei der Ausführung ignoriert.
+            Die Simulation der Objekte erfolgt parallel und ist nicht deterministisch.
+            
+            Nur Objekte die 'Enabled' sind werden berücksichtigt.
+            </summary>
+            <param name="laufzeit">zu simulierende Zeitspanne</param>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.AbstrakteSimulation`1.ErmittleZustandsAusgabe">
+            <summary>
+            Ermittelt alle Zustandsausgaben der beteiligten simulierten Objekte.
+            
+            Nur Objekte die 'Enabled' sind werden berücksichtigt.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.BasisSimulation.StarteSimulation(System.TimeSpan)">
+            <summary>
+            Startet die Simulation mit einer gegebenen Laufzeit.
+            Die Simulation wird in 1 [ms] Schritten durchgeführt.
+            
+            Wird eine Laufzeit von 0 [ms] angegeben, wird die Simulation nie beendet.
+            Simmulationsobjekte mit einer Aktivitäts-Zeit von 0 [ms] werden bei der Ausführung ignoriert.
+            Die Simulation der Objekte erfolgt parallel und ist nicht deterministisch.
+            
+            Nur Objekte die 'Enabled' sind werden berücksichtigt.
+            </summary>
+            <param name="laufzeit">zu simulierende Zeitspanne</param>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.BasisSimulation.ErmittleZustandsAusgabe">
+            <summary>
+            Die Simulation weist alle zu simulierenden Objekte an ihren momentanen Zustand zu
+            ermitteln und verarbeitet diesen in angegebener Weise.
+            
+            Nur Objekte die 'Enabled' sind werden berücksichtigt.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.BasisSimulation.Dispose(System.Boolean)">
+            <summary>
+            Wird von Dispose aufgerufen und gibt alle Ressourcen frei.
+            </summary>
+            <param name="disposing">Angabe, ob der interne Dispose-Prozess ausgeführt werden soll</param>
+        </member>
+        <member name="T:BasicAPI.Ausgabe.NamespaceDoc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Ausgabe.GUIRunnerForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GUIRunnerForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GUIRunnerForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BasicAPI.Ausgabe.GrafischeMaschinenSimulation">
+            <summary>
+            Eine Simulation mit grafischer Darstellung für Simulations-Objekte vom Typ 'AbstrakteMaschinenSteuerung'.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Ausgabe.GrafischeMaschinenSimulation._SimulationsZeitpunkt">
+            <summary>
+            momentaner Zeitpunkt der Simulation
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Ausgabe.GrafischeMaschinenSimulation._Ausgabe">
+            <summary>
+            momentaner Simulationsstand als Text
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GrafischeMaschinenSimulation.GetAusgabe">
+            <summary>
+            Gibt den momentanen Simulationsstand als Text zurück.
+            </summary>
+            <returns>momentaner Simulationsstand als Text</returns>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GrafischeMaschinenSimulation.GetSimulationsZeitpunkt">
+            <summary>
+            Gibt den momentanen Zeitpunkt der Simulation zurück.
+            </summary>
+            <returns>momentaner Zeitpunkt der Simulation</returns>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GrafischeMaschinenSimulation.#ctor">
+            <summary>
+            Initialisiert die Maschinensimulation.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GrafischeMaschinenSimulation.StarteSimulation(System.TimeSpan)">
+            <summary>
+            Startet die Simulation mit einer gegebenen maximalen Laufzeit und 
+            öffnet ein Fenster zur Darstellung und Steuerung der Ausgaben.
+            Die Simulation wird in 1 [ms] Schritten durchgeführt.
+            
+            Wird eine Laufzeit von 0 [ms] angegeben, wird die Simulation nie beendet.
+            
+            Simulations-Objekte mit einer Aktivitäts-Zeit von 0 [ms] werden bei der Ausführung ignoriert.
+            Die Simulation der Objekte erfolgt parallel und ist nicht deterministisch.
+            
+            Nur Objekte die 'Enabled' sind werden berücksichtigt.
+            </summary>
+            <param name="laufzeit">maximal zu simulierende Zeitspanne</param>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GrafischeMaschinenSimulation.ErmittleZustandsAusgabe">
+            <summary>
+            Ermittelt alle Zustandsausgaben der beteiligten simulierten Objekte.
+            
+            Nur Objekte die 'Enabled' sind werden berücksichtigt.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GrafischeMaschinenSimulation.FuehreNaechstenSimulationsschrittAus(System.TimeSpan)">
+            <summary>
+            Führt die nächsten Simulationsschritte in der angegebenen Zeitspanne durch.
+            </summary>
+            <param name="zeitspanne">zu simulierende Zeitspanne</param>
+            <returns>Ist die maximale Laufzeit erreicht, wird 'false' zurückgegeben.</returns>
+        </member>
+        <member name="M:BasicAPI.Ausgabe.GrafischeMaschinenSimulation.Dispose(System.Boolean)">
+            <summary>
+            Wird von Dispose aufgerufen und gibt alle Ressourcen frei.
+            Dabei wird das Fenster der Simulation geschlossen.
+            </summary>
+            <param name="disposing">Angabe, ob der interne Dispose-Prozess ausgeführt werden soll.</param>
+        </member>
+        <member name="T:BasicAPI.Objekte.AbstrakteMaschinenSteuerung">
+            <summary>
+            Eine allgemeine Darstellung einer Maschinensteuerung, die simuliert werden kann.
+            
+            Als Hinweis: Dies ist eine abstrakte Klasse - somit können keine Objekte von ihr instanziiert werden.
+            Es ist daher notwendig von dieser Klasse zu erben, um Objekte in einer Simulation zu verarbeiten.
+            </summary>
+        </member>
+        <member name="T:BasicAPI.Objekte.AbstraktesSimulationsObjekt">
+            <summary>
+            Eine allgemene Darstellung von einem Simulations-Objekt.
+            Es verwaltet ein Zeitintervall, in dem es aktiv sein soll.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.AbstraktesSimulationsObjekt._Enabled">
+            <summary>
+            Gibt an, ob ein Objekt an einer Simulation teilnehmen soll.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.AbstraktesSimulationsObjekt._Name">
+            <summary>
+            Gibt den Namen des zu simulierenden Objektes an.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.AbstraktesSimulationsObjekt._Arbeitszeit">
+            <summary>
+            Die Arbeitszeit gibt an, wie lange das Objekt benötigt um in der Simulation seine Aktion auszuführen.
+            Der Standardwert beträgt 10 [ms].
+            Die kleinste Zeitspanne ist 1 [ms].
+            Negative Werte und 'NULL' werden auf 0 [ms] gesetzt.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.#ctor(System.String)">
+            <summary>
+            Erzeugt ein Simulationsobjekt und initialisiert die Standardwerte.
+            
+            Die Standard-Arbeitszeit beträgt 10 [ms].
+            'Enabled' ist 'true'. (Das Objekt ist für eine Simulation auf 'Aktiv' gesetzt.)
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.GetName">
+            <summary>
+            Gibt den Namen des zu simulierenden Objektes zurück.
+            </summary>
+            <returns>Name des zu simulierenden Objektes</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.GetEnabled">
+            <summary>
+            Gibt an, ob ein Objekt an einer Simulation teilnehmen soll.
+            </summary>
+            <returns>true, wenn Gerät teilnehmen soll</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.SetEnabled(System.Boolean)">
+            <summary>
+            Gerät soll an Simulation teilnehmen --> true
+            </summary>
+            <param name="en">true, wenn Gerät teilnehmen soll, sonst false</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.GetArbeitszeit">
+            <summary>
+            Getter für die Arbeitszeit.
+            Die Aktivitätszeit gibt an, wie lange das Objekt benötigt in der Simulation seine Aktion auszuführen.
+            Der Standardwert beträgt 10 [ms].
+            Die kleinste Einheit is 1 [ms].
+            </summary>
+            <returns>ArbeitsZeit</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.SetArbeitszeit(System.TimeSpan)">
+            <summary>
+            Setter für die Arbeitszeit.
+            Die Arbeitszeit gibt an, wie lange das Objekt benötigt in der Simulation seine Aktion auszuführen.
+            Der Standardwert beträgt 10 [ms].
+            Die kleinste Einheit is 1 [ms].
+            Negative Werte und 'NULL' werden auf 0 [ms] gesetzt.
+            </summary>
+            <param name="arbeitszeit">zu setzende Arbeitszeit</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.FuehreAuftragDurch">
+            <summary>
+            Auftrag der in der Simulation von dem Objekt durchgeführt werden soll.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstraktesSimulationsObjekt.ErmittleZustandsAusgabe">
+            <summary>
+            Ermittelt den aktuellen Simulationszustand des Objektes und gibt diesen als Text aus.
+            </summary>
+            <returns>aktueller Simulationszustand in Textform</returns>
+        </member>
+        <member name="F:BasicAPI.Objekte.AbstrakteMaschinenSteuerung._Geraete">
+            <summary>
+            Liste aller von der Maschinesteuerung verwalteten Geräte.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstrakteMaschinenSteuerung.#ctor(System.String)">
+            <summary>
+            Initialisiert die Werte einer allgemeinen Maschinensteuerung.
+            </summary>
+            <param name="name">Name der Maschinensteuerung</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstrakteMaschinenSteuerung.GetGeraete">
+            <summary>
+            Gibt die Liste aller von der Maschinensteuerung verwalteten Geräte aus.
+            </summary>
+            <returns>Liste aller von der Maschinensteuerung verwalteten Geräte</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.AbstrakteMaschinenSteuerung.RegistriereGeraet(BasicAPI.Objekte.Geraet)">
+            <summary>
+            Meldet ein Gerät bei der Maschinensteuerung an.
+            </summary>
+            <param name="geraet">Anzumeldendes Gerät</param>
+        </member>
+        <member name="T:BasicAPI.Objekte.Prozessschritt">
+            <summary>
+            zu simulierende Prozessfähigkeiten
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Prozessschritt.INITIALISIEREN">
+            <summary>
+            Erzeugung eines Objektes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Prozessschritt.BOHREN">
+            <summary>
+            Bohren eines Objektes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Prozessschritt.FRAESEN">
+            <summary>
+            Fräsen eines Objektes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Prozessschritt.FASEN">
+            <summary>
+            Fasen eines Objektes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Prozessschritt.LACKIEREN">
+            <summary>
+            Lackieren eines Objektes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Prozessschritt.EINLAGERN">
+            <summary>
+            Einlagern eines Objektes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Prozessschritt.UNDEFINIERT">
+            <summary>
+            ein Objekt ist nicht vorhanden oder unbestimmt
+            </summary>
+        </member>
+        <member name="T:BasicAPI.Objekte.Status">
+            <summary>
+            der Status eines zu simulierenden Objektes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Status.BEREIT">
+            <summary>
+            Das Objekt ist bereit.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Status.BELEGT">
+            <summary>
+            Das Objekt ist belegt.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Status.FERTIG">
+            <summary>
+            Das Objekt ist fertig mit einer Aktivität.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Status.GESTOERT">
+            <summary>
+            Das Objekt ist gestört.
+            </summary>
+        </member>
+        <member name="T:BasicAPI.Objekte.Geraet">
+            <summary>
+            Eine allgemeine Darstellung eines Gerätes, welches von einer Maschinensteuerung verwaltet werden kann.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Geraet._ID">
+            <summary>
+            die Identität eines Gerätes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Geraet._Name">
+            <summary>
+            der Name eines Gerätes
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Geraet._Prozessfaehigkeiten">
+            <summary>
+            Eine Liste aller Prozessfähigkeiten, die von einem Gerät ausgeführt werden können.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Geraet._AktuellerStatus">
+            <summary>
+            Der aktuelle Status eines Gerätes.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Geraet._Ausgabe">
+            <summary>
+            Ausgabenachricht
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Geraet._AktuellesTeil">
+            <summary>
+            Speichert ein Teil, das aktuell bearbeitet werden soll.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.#ctor(System.UInt32,System.String,System.Collections.Generic.List{BasicAPI.Objekte.Prozessschritt})">
+            <summary>
+            Erzeugt ein Gerät und setzt seine Standardwerte.
+            
+            Das Gerät hat nach seiner Initialisierung immer den Status 'Bereit'.
+            </summary>
+            <param name="id">die Identität des Gerätes</param>
+            <param name="name">der Name des Gerätes</param>
+            <param name="prozessfaehigkeiten">Eine Liste aller Prozessfähigkeiten, die von dem Gerät ausgeführt werden können.</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.GetID">
+            <summary>
+            Gibt die Identität des Gerätes aus.
+            </summary>
+            <returns>ID</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.GetName">
+            <summary>
+            Gibt den Namen des Gerätes aus.
+            </summary>
+            <returns>Name</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.GetProzessfaehigkeiten">
+            <summary>
+            Gibt die Liste aller Prozessfähigkeiten aus, die von dem Gerät ausgeführt werden können.
+            Dabei handelt es sich um eine Kopie, denn Prozessschritte dürfen nach Initialisierung
+            eines Gerätes nicht mehr verändert werden.
+            </summary>
+            <returns>Liste mit Prozessschritten</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.GetAktuellerStatus">
+            <summary>
+            Gibt den aktuellen Status eines Gerätes aus.
+            </summary>
+            <returns>der aktuelle Status</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.SetAktuellerStatus(BasicAPI.Objekte.Status)">
+            <summary>
+            Setzt den aktuallen Status eines Gerätes neu.
+            </summary>
+            <param name="aktuellerStatus">zu setzender Status</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.Empfange(BasicAPI.Objekte.Teil)">
+            <summary>
+            Weist das Gerät an, ein Teil zu empfangen.
+            </summary>
+            <param name="teil">das zu empfangende Teil</param>
+            <returns>Das Teil konnte entgegengenommen werden.</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.Versende">
+            <summary>
+            Weist das Gerät an, das beinhaltende Teil auszugeben.
+            
+            Ist kein Teil vorhanden, wird das null-Objekt ausgegeben.
+            </summary>
+            <returns>das auszugebende Teil</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.Verarbeite(BasicAPI.Objekte.Prozessschritt)">
+            <summary>
+            Weist das Gerät an, das beinhaltende Teil zu bearbeiten.
+            Dabei ist der zu bearbeitende Prozessschritt anzugeben.
+            Kann ein Gerät den angegebenen Prozessschritt nicht umsetzen, setzt es sein Status auf 'GESTOERT'.
+            </summary>
+            <param name="prozessschritt">der von dem Gerät zu bearbeitende Prozessschritt</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.SetID(System.UInt32)">
+            <summary>
+            Setzt die Identität des Gerätes.
+            </summary>
+            <param name="id">neue ID</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.SetName(System.String)">
+            <summary>
+            Setzt den Namen des Gerätes.
+            </summary>
+            <param name="name">neuer Name des Gerätes</param>    
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.SetProzessfaehigkeiten(System.Collections.Generic.List{BasicAPI.Objekte.Prozessschritt})">
+            <summary>
+            Setzt die Prozessfähigkeiten des Gerätes
+            </summary>
+            <param name="prozessfaehigkeiten">eine Liste mit Prozessfähigkeiten</param>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.GetAusgabe">
+            <summary>
+            Gibt Textausgabe der Maschine einmal zurück und löscht diese 
+            </summary>
+            <returns>Textausgaben der Maschine</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Geraet.SetAusgabe(System.String)">
+            <summary>
+            Setter für Textausgaben der Maschine
+            </summary>
+            <param name="ausgabe">Textausgabe der Maschine</param>
+        </member>
+        <member name="T:BasicAPI.Objekte.Teil">
+            <summary>
+            Ein Teil, dass in einer Simulation bearbeitet werden kann.
+            </summary>
+        </member>
+        <member name="F:BasicAPI.Objekte.Teil._Historie">
+            <summary>
+            Eine Liste mit allen an dem Teil durchgeführten Prozessschritten
+            in chronologischer Reihenfolge.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Objekte.Teil.#ctor">
+            <summary>
+            Erzeugt ein Teil und setzt seine Standardwerte.
+            </summary>
+        </member>
+        <member name="M:BasicAPI.Objekte.Teil.GetHistorie">
+            <summary>
+            Gibt eine Kopie der Liste mit allen an dem Teil durchgeführten Prozessschritten
+            in chronologischer Reihenfolge aus.
+            
+            Die Historie wird von dem Teil verwaltet und kann nicht geändert werden.
+            </summary>
+            <returns>Liste aller an dem Teil durgeführten Prozessschritte</returns>
+        </member>
+        <member name="M:BasicAPI.Objekte.Teil.SetzeAbgeschlossenenProzessschritt(BasicAPI.Objekte.Prozessschritt)">
+            <summary>
+            Setzt den zuletzt an dem Teil durchgeführten Prozessschritt .
+            Wird ein Prozessschritt gesetzt, wird dieser in die Historie eingetragen.
+            </summary>
+            <param name="neuerProzessschritt">Neu zu setzender Prozessschritt, der an dem Teil durchgeführt wurde.</param>
+        </member>
+    </members>
+</doc>

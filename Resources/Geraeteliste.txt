@@ -1,0 +1,8 @@
+﻿# Jede Zeile repräsentiert ein Gerät mit den Werten: (ID Name Prozessschritt).
+
+0 Eingangslager INITIALISIEREN
+1 Ausgangslager EINLAGERN
+2 Werkzeugmaschiene01 BOHREN
+3 Werkzeugmaschiene02 FRAESEN
+4 Werkzeugmaschiene03 LACKIEREN
+5 Werkzeugmaschiene04 FASEN
